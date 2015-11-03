@@ -14,6 +14,17 @@ import java.io.InputStream;
 /**
  * Created by ILisetskiy on 03.11.2015.
  */
+
+// getStatus
+// setSource
+// getSource
+// setOutput
+// getOutput
+// start
+// stop
+// setSettings
+// getSettings
+
 @RestController
 public class EncoderController {
 
