@@ -1,4 +1,4 @@
-package com.fakewebencoder;
+package com.fakewebencoder.utils;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

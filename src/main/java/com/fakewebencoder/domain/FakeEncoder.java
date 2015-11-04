@@ -6,7 +6,7 @@ package com.fakewebencoder.domain;
 public class FakeEncoder {
 
     private Settings settings;
-    private Status status;
+    private EncoderStatus status;
     private Source source;
     private Output output;
 
@@ -18,11 +18,11 @@ public class FakeEncoder {
         this.settings = settings;
     }
 
-    public Status getStatus() {
+    public EncoderStatus getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(EncoderStatus status) {
         this.status = status;
     }
 
@@ -42,11 +42,41 @@ public class FakeEncoder {
         this.output = output;
     }
 
-    public FakeEncoder(Settings settings, Status status, Source source, Output output) {
+    public FakeEncoder(Settings settings, EncoderStatus status, Source source, Output output) {
 
         this.settings = settings;
         this.status = status;
         this.source = source;
         this.output = output;
+
+        if (getStatus() == null) {
+            setStatus(new EncoderStatus(false, true, 8.0, 20.0, 32.0));
+        }
+    }
+
+    public void generateStatus() {
+
+        double ramUsage = 40.0;
+        double cpuUsage = 20.0;
+
+        if (status.getIsEncoding()) {
+            ramUsage = 80.0;
+            cpuUsage = 70.0;
+        }
+
+        ramUsage = (Math.random()*20-20)*ramUsage/100 + ramUsage;
+        cpuUsage = (Math.random()*10-10)*cpuUsage/100 + cpuUsage;
+
+        status.setRamTotal(8.0);
+        status.setRamUsage(ramUsage);
+        status.setCpuUsage(cpuUsage);
+    }
+
+    public void start() {
+        status.setIsEncoding(true);
+    }
+
+    public void stop() {
+        status.setIsEncoding(false);
     }
 }
