@@ -13,21 +13,6 @@ import java.io.IOException;
  * Created by ILisetskiy on 03.11.2015.
  */
 
-// addEncoder
-// updateEncoder
-// deleteEncoder
-// getEncodersList
-//
-// addSource
-// updateSource
-// deleteSource
-// getSourcesList
-//
-// addOutput
-// updateOutput
-// deleteOutput
-// getOutputsList
-//
 // getSourcePreview
 // getOutputPreview
 //
