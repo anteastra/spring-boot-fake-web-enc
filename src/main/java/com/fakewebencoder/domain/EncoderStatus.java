@@ -6,13 +6,11 @@ package com.fakewebencoder.domain;
 public class EncoderStatus {
 
     private Boolean isEncoding;
-    private Boolean isConnected;
     private Double ramUsage;
     private Double ramTotal;
     private Double cpuUsage;
-    public EncoderStatus(Boolean isEncoding, Boolean isConnected, Double ramUsage, Double ramTotal, Double cpuUsage) {
+    public EncoderStatus(Boolean isEncoding, Double ramUsage, Double ramTotal, Double cpuUsage) {
         this.isEncoding = isEncoding;
-        this.isConnected = isConnected;
         this.ramUsage = ramUsage;
         this.ramTotal = ramTotal;
         this.cpuUsage = cpuUsage;
@@ -48,13 +46,5 @@ public class EncoderStatus {
 
     public void setIsEncoding(Boolean isEncoding) {
         this.isEncoding = isEncoding;
-    }
-
-    public Boolean getIsConnected() {
-        return isConnected;
-    }
-
-    public void setIsConnected(Boolean isConnected) {
-        this.isConnected = isConnected;
     }
 }

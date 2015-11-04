@@ -5,16 +5,16 @@ package com.fakewebencoder.domain;
  */
 public class FakeEncoder {
 
-    private Settings settings;
+    private EncoderSettings settings;
     private EncoderStatus status;
     private Source source;
     private Output output;
 
-    public Settings getSettings() {
+    public EncoderSettings getSettings() {
         return settings;
     }
 
-    public void setSettings(Settings settings) {
+    public void setSettings(EncoderSettings settings) {
         this.settings = settings;
     }
 
@@ -42,7 +42,7 @@ public class FakeEncoder {
         this.output = output;
     }
 
-    public FakeEncoder(Settings settings, EncoderStatus status, Source source, Output output) {
+    public FakeEncoder(EncoderSettings settings, EncoderStatus status, Source source, Output output) {
 
         this.settings = settings;
         this.status = status;
@@ -50,7 +50,7 @@ public class FakeEncoder {
         this.output = output;
 
         if (getStatus() == null) {
-            setStatus(new EncoderStatus(false, true, 8.0, 20.0, 32.0));
+            setStatus(new EncoderStatus(false, 8.0, 20.0, 32.0));
         }
     }
 

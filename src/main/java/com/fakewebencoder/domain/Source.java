@@ -5,4 +5,17 @@ package com.fakewebencoder.domain;
  */
 public class Source {
     private String path;
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public Source(String path) {
+
+        this.path = path;
+    }
 }
